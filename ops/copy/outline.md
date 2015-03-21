@@ -2,6 +2,8 @@
 
 Competitor intelligence helps you make informed business decisions by gathering insights about your competitors.
 
+Competitor intelligence is the process where you understand what you need to do based on what your competitors are already doing.
+
 Widipedia: http://en.wikipedia.org/wiki/Competitive_intelligence
 
 ***
@@ -28,6 +30,8 @@ Companies used to gather and analyze data from reports and consumer surveys. Thi
 ***
 
 # Web data and competitor intelligence
+
+There is a vast amount of useful data available on people's web behavior. Data includes site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights are available from this data.
 
 * Competitor behavior
 

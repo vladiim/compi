@@ -1,0 +1,18 @@
+.key-point {
+  @extend .row;
+//  @include border-radius(4px);
+  padding: 20px 0 20px 0;
+//  background-color: $blue-jeans-light;
+
+  header {
+    @extend .col-sm-4;
+  }
+
+  section {
+    @extend .col-sm-8;
+  }
+}
+
+header.intro {
+  text-align: center;
+}
