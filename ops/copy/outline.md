@@ -8,7 +8,9 @@ Widipedia: http://en.wikipedia.org/wiki/Competitive_intelligence
 
 ***
 
-# Competitor intelligence benefits
+# Why?
+
+## Competitor intelligence has a range of benefits
 
 Competitor intelligence allows you to understand a business market and its opportunities. 
 
@@ -29,9 +31,17 @@ Companies used to gather and analyze data from reports and consumer surveys. Thi
 
 ***
 
+# How?
+
+## It's easier than ever before to do competitor intelligence.
+
+There is a vast amount of useful data available on people's web behavior. Data includes people's site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights possible are available from this data.
+
+<!-- ***
+
 # Web data and competitor intelligence
 
-There is a vast amount of useful data available on people's web behavior. Data includes site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights are available from this data.
+There is a vast amount of useful data available on people's web behavior. Data includes site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights are available from this data. -->
 
 * Competitor behavior
 

@@ -1,0 +1,9 @@
+.form-inputs {
+  p {
+    @extend .form-group;
+
+    input {
+      @extend .form-control;
+    }
+  }
+}

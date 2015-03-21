@@ -1,0 +1,53 @@
+nav {
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+  padding-right: 15px;
+
+  header {
+    @extend .navbar-header;
+
+    a {
+      @extend .navbar-brand;
+    }
+  }
+
+  ul {
+    @extend .nav;
+    @extend .navbar-nav;
+  }
+
+  .cta {
+    @extend .navbar-right;
+
+    li {
+      margin: 10px;
+    }
+
+    a {
+      @extend .btn;
+      @extend .btn-default;
+    }
+  }
+
+  @media (min-width: 600px) {
+    nav > ul.links {
+      display: none;
+    }
+  }
+}
+
+// ------ Override bootstrap navbar collapse
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+.navbar-nav, .navbar-header, .navbar-nav > li {
+  float: left !important;
+}
+.navbar-header {
+  clear: none !important;
+}
+.navbar-right {
+  float: right!important;
+}

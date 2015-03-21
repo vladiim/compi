@@ -1,5 +1,12 @@
+// ------ Bootstrap
 @import 'bootstrap';
 
+// ------ Custom general
 @import 'custom/variables';
 @import 'custom/mixins';
+
+// ------ Customer specific
+@import 'custom/global';
+@import 'custom/forms';
+@import 'custom/nav';
 @import 'custom/home';

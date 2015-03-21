@@ -1,7 +1,9 @@
 .key-point {
   @extend .row;
-//  @include border-radius(4px);
-  padding: 20px 0 20px 0;
+  @extend .navbar-default;
+  @include border-radius(10px);
+  padding: 20px 0;
+  margin: 20px 0;
 //  background-color: $blue-jeans-light;
 
   header {
