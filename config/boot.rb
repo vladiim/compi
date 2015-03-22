@@ -7,6 +7,8 @@ require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
 
+require File.expand_path('../workers.rb', __FILE__)
+
 ##
 # ## Enable devel logging
 #
@@ -35,6 +37,7 @@ Bundler.require(:default, RACK_ENV)
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  # $redis = Redis.new(host: 'localhost', port: 3000) unless RACK_ENV['development']
 end
 
 ##

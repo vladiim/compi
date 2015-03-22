@@ -10,9 +10,9 @@ RSpec.describe 'Reports', type: :feature do
       expect(page).to have_content(Copy::Report.thank_you_page(email, site))
     end
 
-    it 'generates a report' do
+    it 'generates a user, mailer and report' do
       expect(Report::Form).to receive(:new).with(email, site) { ReportFormStub }
-      expect(ReportFormStub).to receive(:generate_report)
+      expect(ReportFormStub).to receive(:process)
       fill_in_report_form
     end
   end
@@ -27,9 +27,7 @@ RSpec.describe 'Reports', type: :feature do
 end
 
 module ReportFormStub
-  def self.generate_report
-    'GENERATED REPORT'
-  end
+  def self.process; end
 
   def self.message; end
 end

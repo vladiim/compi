@@ -4,10 +4,8 @@ Compi::App.controllers :reports do
   end
 
   post :get_report, map: '/reports' do
-    site    = params['competitor_website']
-    email   = params['email']
-    report  = Report::Form.new(email, site)
-    report.generate_report
+    report = Report::Form.new(params['email'], params['competitor_website'])
+    report.process
     render 'reports/thanks', locals: { message: report.message }
   end
 end
