@@ -1,6 +1,6 @@
 %nav
   %header
-    %a{ href: '#' } Compi
+    %a{ href: '/' } Compi
   %ul.links
     %li
       %a{ href: '#why' } Why
@@ -11,6 +11,7 @@
 
   %ul.cta
     %li
-      %a{ href: '#report', 'data-toggle' => 'modal', 'data-target' => '#getReport' } Get report
+      / %a{ href: '/reports', 'data-toggle' => 'modal', 'data-target' => '#getReport' } Get report
+      %a{ href: '/reports' } Get report
 
 = partial 'layouts/get_report'

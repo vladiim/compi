@@ -42,6 +42,8 @@
 
 * .ico
 
+* 404 page
+
 ***
 
 # Ideas

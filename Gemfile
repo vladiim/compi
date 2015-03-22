@@ -14,6 +14,7 @@ gem 'sequel', '~> 4.20.0'
 group :test do
   gem 'rspec',     '~> 3.2.0'
   gem 'rack-test', '~> 0.6.3', :require => 'rack/test'
+  gem 'capybara',  '~> 2.4.4'
 end
 
 # ------ Framework
