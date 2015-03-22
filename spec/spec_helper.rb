@@ -6,6 +6,7 @@ require 'byebug'
 
 RSpec.configure do |conf|
   conf.include Rack::Test::Methods
+  conf.around(:each) { |example| Sequel::Model.db.transaction(rollback: :always, auto_savepoint: true){ example.run } }
 end
 
 # You can use this method to custom specify a Rack app
