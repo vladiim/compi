@@ -1,9 +1,11 @@
 .key-point {
   @extend .row;
-  @extend .navbar-default;
-  @include border-radius(10px);
+  @extend .panel;
+  @extend .panel-default;
+//  @extend .navbar-default;
+//  @include border-radius(10px);
   padding: 20px 0;
-  margin: 20px 0;
+//  margin: 20px 0;
 //  background-color: $blue-jeans-light;
 
   header {
@@ -17,4 +19,5 @@
 
 header.intro {
   text-align: center;
+  @extend .jumbotron;
 }

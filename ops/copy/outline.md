@@ -115,6 +115,12 @@ There is a vast amount of useful data available on people's web behavior. Data i
 
 # Competitor intelligence tools
 
+* good articles:
+
+    - http://whoisryannystrom.com/2014/07/15/Validating-a-niche-with-Facebook-ads/
+
+    - http://www.shopify.com/blog/17844020-6-ways-to-validate-your-business-idea
+
 * make searchable table - name, url, price, use case
 
 * external report companies: gartner, forrester, nielsen etc
@@ -124,6 +130,12 @@ There is a vast amount of useful data available on people's web behavior. Data i
 * look at my data d00d notes
 
 * Moz
+
+* social: http://topsy.com/
+
+* ebay, amazon customers (good customers that leave reviews)
+
+* facebook ad tool
 
 * web speed: website optimizer, tools.pingdom
 

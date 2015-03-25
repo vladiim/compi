@@ -1,11 +1,13 @@
-class User
-  attr_reader :email, :db
+class User < Sequel::Model
+# class User
+  attr_reader :email, :table
   def initialize(email)
     @email = email
-    @db    = Sequel::Model.db[:users]
+    # @table = Sequel::Model.db[:users]
   end
 
   def save
-    db.insert(email: email)
+    # table.insert(email: email)
+    create(email: email)
   end
 end
