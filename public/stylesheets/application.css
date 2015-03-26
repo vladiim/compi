@@ -5783,6 +5783,19 @@ nav {
     nav nav > ul.links {
       display: none; } }
 
+.navbar, nav {
+  background-color: #3d4a57;
+  border-color: #fbfbfb; }
+
+.navbar .navbar-nav > li > a, nav .navbar-nav > li > a, .navbar nav ul > li > a, nav .navbar ul > li > a, nav ul > li > a,
+.navbar a.navbar-brand,
+nav a.navbar-brand,
+.navbar nav header a,
+nav header .navbar a,
+nav header a {
+  color: #fbfbfb;
+  text-decoration: none; }
+
 .navbar-collapse.collapse {
   display: block !important; }
 
@@ -5800,18 +5813,5 @@ nav {
 
 header.intro {
   text-align: center; }
-
-.navbar, nav {
-  background-color: #3d4a57;
-  border-color: #fbfbfb; }
-
-.navbar .navbar-nav > li > a, nav .navbar-nav > li > a, .navbar nav ul > li > a, nav .navbar ul > li > a, nav ul > li > a,
-.navbar a.navbar-brand,
-nav a.navbar-brand,
-.navbar nav header a,
-nav header .navbar a,
-nav header a {
-  color: #fbfbfb;
-  text-decoration: none; }
 
 /*# sourceMappingURL=application.css.map */

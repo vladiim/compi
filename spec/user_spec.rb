@@ -4,7 +4,7 @@ RSpec.describe User do
   let(:email)   { 'foo@bar.com' }
   let(:subject) { User.new(email) }
 
-  # before { allow(Sequel::Model).to receive(:db) { FakeTable.new } }
+  before { allow(Sequel::Model).to receive(:db) { FakeTable.new } }
 
   describe '.initialize' do
     it 'saves the email' do
@@ -18,13 +18,13 @@ RSpec.describe User do
     end
   end
 
-  # class FakeTable
-  #   def [](args)
-  #     self
-  #   end
+  class FakeTable
+    def [](args)
+      self
+    end
 
-  #   def create(*args)
-  #     'SAVED TO DB'
-  #   end
-  # end
+    def insert(*args)
+      'SAVED TO DB'
+    end
+  end
 end

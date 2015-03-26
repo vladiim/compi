@@ -1,59 +1,58 @@
-# What is competitor intelligence?
+>HEAD< 
+Competitor Intelligence
 
-Competitor intelligence helps you make informed business decisions by gathering insights about your competitors.
+>SUB< 
+Quick smarts
 
-Competitor intelligence is the process where you understand what you need to do based on what your competitors are already doing.
+>INTRO< 
+Competitor intelligence (CI) equips you with the insight to make strategic moves around what your marketplace is already doing. 
 
-Widipedia: http://en.wikipedia.org/wiki/Competitive_intelligence
+Part zeitgeist, part data science, CI gives your business an ear-to-the-ground competitive edge. 
 
-***
+>BODY 1<
+Information aspiration
 
-# Why?
+In the old days, companies gleaned their marketing insights from reams of reports and consumer surveys – a slow and expensive process. 
 
-## Competitor intelligence has a range of benefits
+Today’s sophisticated competitor intelligence is inexpensive and fast. It uses a range of digital tools to create an accurate overview of your market and its opportunities:
 
-Competitor intelligence allows you to understand a business market and its opportunities. 
+•   What are my competitors doing?
+•   Who are the market leaders? Why?
+•   What are my competitor's strengths and weaknesses?
+•   Is there an unmet need in the marketplace?
 
-Companies used to gather and analyze data from reports and consumer surveys. This process was slow and expensive. Today you can do sophisticated competitor intelligence quickly and cheaply with a wide range of tools.
+>BODY 2<
+Business – not buzz
 
-* Context
+We’re here to get you clued-up on what's going on around you. 
 
-    - What are my competitors doing?
+We use data on web behaviour – site visits, web searches, social posts, app downloads – to yield some of the richest competitor intelligence insights available to your business:
 
-    - Who are the market leaders and why?
+Competitor behaviour
+•   Website content – pages, topics, product prices
+•   Website success – traffic, engagement, social shares, inflows and outflows
 
-* Opportunities
-
-    - What are my competitor's strengths and weaknesses?
-
-    - Is there an unmet need in the marketplace?
+Customer behaviour
+•   Quantitative intent – product and brand searches
+•   Qualitative understanding – social comments and conversation
 
 
-***
 
-# How?
 
-## It's easier than ever before to do competitor intelligence.
+>BODY 3<
+First one’s on us
 
-There is a vast amount of useful data available on people's web behavior. Data includes people's site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights possible are available from this data.
+Our easy-to-read reports contain everything you need to know in a single-page download. No trivial jargon, pointless infographics, clunky paragraphs or buzzword bingo. And the first one is free. 
 
-<!-- ***
+Here’s what to expect:
 
-# Web data and competitor intelligence
+•   Describe actual service / report (use a different word for ‘report’?) 
+•   What can they expect? How often?
+•   What is the benefit of signing up right now?
 
-There is a vast amount of useful data available on people's web behavior. Data includes site visits, web searches, social posts and app downloads. Some of the richest competitor intelligence insights are available from this data. -->
 
-* Competitor behavior
 
-    - Website content; pages, topics, product prices
 
-    - Website success; traffic, engagement, social shares, inflows and outflows
-
-* Customer behavior
-
-    - Product and brand search terms give you quantitative intent
-
-    - Social media comments and conversations give you qualitative understanding
 
 ***
 
