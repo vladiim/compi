@@ -150,7 +150,11 @@ Here’s what to expect:
 
 * trellian's keyword discovery, wordtracker, KeywordSpy
 
+* https://app.buzzsumo.com/reports/content-analysis?num_days=360&q=content%20marketing
+
 * pricenomics
+
+* http://buzzsumo.com/
 
 * coremetrics, fireclick, quantcast
 

@@ -1,7 +1,7 @@
 %section
   %header
     %h1 Get report
-    %h4 We're still building 
+    %h4 We're still building our reporting tool, let us know your email and we'll notify you once it's up
 
   %section
     = form_tag '/reports', method: 'post' do
@@ -13,7 +13,7 @@
 
         .checkbox
           %label
-            %input{ type: 'checkbox' } Get CI updates
+            %input{ type: 'checkbox' } Get CI updates, no junk just a weekly round up of CI articles
 
       = field_set_tag(class: 'buttons') do
         = submit_tag 'Get report', class: 'btn btn-default'
