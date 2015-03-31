@@ -1,5 +1,5 @@
 # Defines our constants
-RACK_ENV = ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
+RACK_ENV = ENV['RACK_ENV'] ||= 'development' unless defined?(RACK_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
 # Load our dependencies
@@ -38,6 +38,10 @@ require File.expand_path('../workers.rb', __FILE__)
 #
 Padrino.before_load do
   # $redis = Redis.new(host: 'localhost', port: 3000) unless RACK_ENV['development']
+  if Padrino.env == :production
+    uri = URI.parse(ENV['REDISTOGO_URL'])
+    $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
+  end
 end
 
 ##
