@@ -1,3 +1,17 @@
+# Features
+
+* URL map
+
+* Filter duplicate urls
+
+    - http://blog.urx.com/urx-blog/2014/9/4/the-science-of-crawl-part-1-deduplication-of-web-content
+
+    - https://github.com/igrigorik/bloomfilter-rb
+
+    - Levenshtein distance b/w pages
+
+***
+
 # Analytics
 
 * GTM
@@ -47,6 +61,8 @@
 * insp
 
     - http://www.tapinfluence.com/
+
+    - https://flowxo.com/
 
 ***
 

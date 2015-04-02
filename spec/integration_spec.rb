@@ -19,7 +19,9 @@ RSpec.describe 'Reports', type: :feature do
 
   def fill_in_report_form
     visit '/'
-    click_link 'Get report'
+    within 'nav' do
+      click_link 'Get report'
+    end
     fill_in 'competitor_website', with: site
     fill_in 'email', with: email
     click_button 'Get report'
