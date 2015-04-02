@@ -1,0 +1,6 @@
+.cta {
+  a {
+    @extend .btn;
+    @extend .btn-default;
+  }
+}

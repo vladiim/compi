@@ -38,10 +38,10 @@ require File.expand_path('../workers.rb', __FILE__)
 #
 Padrino.before_load do
   # $redis = Redis.new(host: 'localhost', port: 3000) unless RACK_ENV['development']
-  if Padrino.env == :production
-    uri = URI.parse(ENV['REDISTOGO_URL'])
-    $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
-  end
+  # if Padrino.env == :production
+  #   uri = URI.parse(ENV['REDISTOGO_URL'])
+  #   $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
+  # end
 end
 
 ##

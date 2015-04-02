@@ -23,11 +23,6 @@ nav {
     li {
       margin: 10px;
     }
-
-    a {
-      @extend .btn;
-      @extend .btn-default;
-    }
   }
 
   @media (min-width: 600px) {
