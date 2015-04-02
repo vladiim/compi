@@ -7,7 +7,8 @@ module Report
     end
 
     def process
-      create_user
+      user = create_user
+      user.add_business(url: site)
       send_thank_you_mail
       generate_report
     end
@@ -19,15 +20,17 @@ module Report
     private
 
     def send_thank_you_mail
+      # should be doing this with ids only!
       Worker::Mailer::GetReportThanks.perform_async(email, site)
     end
 
     def generate_report
+      # should be doing this with ids only!
       Worker::Report::Generator.perform_async(email, site)
     end
 
     def create_user
-      User.new(email).save
+      User.create(email: email)
     end
   end
 end

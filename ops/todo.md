@@ -18,6 +18,8 @@
 
     - GA goal set up
 
+* Use an error service - Honeybadger, Airbrake, Rollbar, BugSnag, Sentry, Exceptiontrap, Raygun, etc. They're all similar in feature sets and pricing but pick one and use it.
+
 * keen.io + js library
 
 * Reporting dashboard
