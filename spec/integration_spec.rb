@@ -11,7 +11,7 @@ RSpec.describe 'Reports', type: :feature do
     end
 
     it 'generates a user, mailer and report' do
-      expect(Report::Form).to receive(:new).with(email, site) { ReportFormStub }
+      expect(Report::Form).to receive(:new).with(email, site, 1) { ReportFormStub }
       expect(ReportFormStub).to receive(:process)
       fill_in_report_form
     end
@@ -24,6 +24,7 @@ RSpec.describe 'Reports', type: :feature do
     end
     fill_in 'competitor_website', with: site
     fill_in 'email', with: email
+    check 'subscribe'
     click_button 'Get report'
   end
 end

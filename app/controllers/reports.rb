@@ -4,8 +4,10 @@ Compi::App.controllers :reports do
   end
 
   post :get_report, map: '/reports' do
-    report = Report::Form.new(params['email'], params['competitor_website'])
-    report.process
-    render 'reports/thanks', locals: { message: report.message }
+    form = Report::Form.new(params.fetch('email'),
+                            params.fetch('competitor_website'),
+                            params.fetch('subscribe').to_i)
+    form.process
+    render 'reports/thanks', locals: { message: form.message }
   end
 end

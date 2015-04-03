@@ -17,15 +17,20 @@ RSpec.describe Report::Form do
 
   describe '#process' do
     it 'creates a mailer and report generator background job' do
-      expect(User).to receive(:create).with(email: email) { UserStub }
-      expect(UserStub).to receive(:add_business).with(url: site) { 'BUSINESS' }
-      expect(Worker::Mailer::GetReportThanks).to receive(:perform_async).with(email, site)
-      expect(Worker::Report::Generator).to receive(:perform_async).with(email, site)
+      expect(User).to receive(:create).with(email: email, subscription: 0) { UserStub }
+      expect(UserStub).to receive(:add_business).with(url: site) { BusinessStub }
+      expect(Worker::Mailer::GetReportThanks).to receive(:perform_async).with(1, 2)
+      expect(Worker::Report::Generator).to receive(:perform_async).with(1, 2)
       subject.process
     end
   end
 
   module UserStub
     def self.add_business(args); end
+    def self.id; 1; end
+  end
+
+  module BusinessStub
+    def self.id; 2; end
   end
 end

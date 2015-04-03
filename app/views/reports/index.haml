@@ -17,7 +17,10 @@
 
         .checkbox
           %label
-            %input{ type: 'checkbox' } Get CI updates, no junk just a weekly round up of CI articles
+            = check_box_tag :subscribe
+            %p Get CI updates, no junk just a weekly round up of CI articles
+
+            / %input{ type: 'checkbox' } Get CI updates, no junk just a weekly round up of CI articles
 
       = field_set_tag(class: 'buttons') do
         = submit_tag 'Get report', class: 'btn btn-default'

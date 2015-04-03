@@ -1,14 +1,16 @@
 module Report
   class Form
-    attr_reader :email, :site
-    def initialize(email, site)
-      @email = email
-      @site  = site
+    attr_reader :email, :site, :subscription
+    def initialize(email, site, subscription = 0)
+      @email        = email
+      @site         = site
+      @subscription = subscription
     end
 
+    attr_reader :user, :business
     def process
-      user = create_user
-      user.add_business(url: site)
+      @user     = create_user
+      @business = user.add_business(url: site)
       send_thank_you_mail
       generate_report
     end
@@ -20,17 +22,15 @@ module Report
     private
 
     def send_thank_you_mail
-      # should be doing this with ids only!
-      Worker::Mailer::GetReportThanks.perform_async(email, site)
+      Worker::Mailer::GetReportThanks.perform_async(user.id, business.id)
     end
 
     def generate_report
-      # should be doing this with ids only!
-      Worker::Report::Generator.perform_async(email, site)
+      Worker::Report::Generator.perform_async(user.id, business.id)
     end
 
     def create_user
-      User.create(email: email)
+      User.create(email: email, subscription: subscription)
     end
   end
 end
