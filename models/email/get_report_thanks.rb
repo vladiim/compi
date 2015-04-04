@@ -1,0 +1,34 @@
+module EmailTemplate
+  class GetReportThanks
+
+    delegate :deliver, to: :mailer
+
+    attr_reader :user, :business, :subject_line, :mailer
+    def initialize(user_id, business_id)
+      @user         = User.find(user_id.to_i)
+      @business     = Business.find(business_id.to_i)
+      @subject_line = 'Your Competitive Intelligence Report'
+      @mailer       = Email.new(self)
+    end
+
+    def html_content
+      Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
+        .render(content)
+    end
+
+    def text_content
+      content
+    end
+
+    private
+
+    def content
+      """
+        Hi and thanks for requesting a compi report.
+        I'm currently building out the first version of the reporting tool.
+        Yours truly
+        Vlad
+      """
+    end
+  end
+end

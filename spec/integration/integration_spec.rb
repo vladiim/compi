@@ -2,7 +2,7 @@ require_relative 'integration_spec_helper'
 
 RSpec.describe 'Reports', type: :feature do
   let(:email) { 'foo@bar.com' }
-  let(:site)   { 'http://www.example.com' }
+  let(:site)  { 'http://www.example.com' }
 
   describe 'fill in get report form' do
     it 'loads the thank you page' do
