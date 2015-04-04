@@ -12,7 +12,7 @@ module Report
       @user     = find_or_create_user
       @business = user.add_business(url: site)
       send_thank_you_mail
-      generate_report
+      # generate_report
     end
 
     def message

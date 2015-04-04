@@ -20,7 +20,7 @@ RSpec.describe Report::Form do
       expect(User).to receive(:find_or_create).with(email: email) { UserStub }
       expect(UserStub).to receive(:add_business).with(url: site) { BusinessStub }
       expect(Worker::Mailer::GetReportThanks).to receive(:perform_async).with(1, 2)
-      expect(Worker::Report::Generator).to receive(:perform_async).with(1, 2)
+      # expect(Worker::Report::Generator).to receive(:perform_async).with(1, 2)
       subject.process
     end
   end

@@ -1,4 +1,4 @@
-require 'integration_spec_helper'
+require_relative 'integration_spec_helper'
 
 RSpec.describe 'Reports', type: :feature do
   let(:email) { 'foo@bar.com' }
