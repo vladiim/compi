@@ -9,7 +9,7 @@ module Report
 
     attr_reader :user, :business
     def process
-      @user     = create_user
+      @user     = find_or_create_user
       @business = user.add_business(url: site)
       send_thank_you_mail
       generate_report
@@ -29,8 +29,9 @@ module Report
       Worker::Report::Generator.perform_async(user.id, business.id)
     end
 
-    def create_user
-      User.create(email: email, subscription: subscription)
+    def find_or_create_user
+      User.find_or_create(email: email)
+          .update(subscription: subscription)
     end
   end
 end

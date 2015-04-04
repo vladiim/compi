@@ -17,7 +17,7 @@ RSpec.describe Report::Form do
 
   describe '#process' do
     it 'creates a mailer and report generator background job' do
-      expect(User).to receive(:create).with(email: email, subscription: 0) { UserStub }
+      expect(User).to receive(:find_or_create).with(email: email) { UserStub }
       expect(UserStub).to receive(:add_business).with(url: site) { BusinessStub }
       expect(Worker::Mailer::GetReportThanks).to receive(:perform_async).with(1, 2)
       expect(Worker::Report::Generator).to receive(:perform_async).with(1, 2)
@@ -28,6 +28,7 @@ RSpec.describe Report::Form do
   module UserStub
     def self.add_business(args); end
     def self.id; 1; end
+    def self.update(args); self; end
   end
 
   module BusinessStub

@@ -7,6 +7,6 @@ task :deploy do
     2. Migrate dev/test databases\t rake migrate\n
     3. Ensure git is clean\t\t git status\n
     4. Push to heroku\t\t\t git push heroku\n
-    5. Migrate production database\t heroku run:detatched sq:migrate\n
+    5. Migrate production database\t heroku run:detached rake sq:migrate\n
   """
 end
