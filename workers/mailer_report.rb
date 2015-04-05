@@ -4,6 +4,7 @@ module Worker
       include Sidekiq::Worker
 
       def perform(user_id, business_id)
+        
         EmailTemplate::GetReportThanks.new(user_id, business_id).deliver
       end
     end

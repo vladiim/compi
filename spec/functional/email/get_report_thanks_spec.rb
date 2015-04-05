@@ -8,8 +8,8 @@ RSpec.describe EmailTemplate::GetReportThanks do
   let(:subject)     { EmailTemplate::GetReportThanks.new(user_id, business_id) }
 
   before do
-    expect(User).to receive(:find).with(user_id.to_i) { user }
-    expect(Business).to receive(:find).with(business_id.to_i) { business }
+    expect(User).to receive(:find).with(id: user_id.to_i) { user }
+    expect(Business).to receive(:find).with(id: business_id.to_i) { business }
   end
 
   describe '#initialize' do

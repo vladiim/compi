@@ -5,8 +5,8 @@ module EmailTemplate
 
     attr_reader :user, :business, :subject_line, :mailer
     def initialize(user_id, business_id)
-      @user         = User.find(user_id.to_i)
-      @business     = Business.find(business_id.to_i)
+      @user         = User.find(id: user_id.to_i)
+      @business     = Business.find(id: business_id.to_i)
       @subject_line = 'Your Competitive Intelligence Report'
       @mailer       = Email.new(self)
     end
