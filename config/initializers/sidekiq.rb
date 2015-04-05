@@ -7,5 +7,5 @@ Sidekiq.configure_client do |config|
 end
 
 Sidekiq.configure_server do |config|
-  config.redis = REDIS_CONFIG.merge(size: 2) if Padrino.env == :production
+  config.redis = REDIS_CONFIG.merge(size: 4) if Padrino.env == :production
 end
