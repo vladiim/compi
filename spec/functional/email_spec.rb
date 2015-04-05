@@ -53,7 +53,7 @@ RSpec.describe Email do
     end
   end
 
-  MockUser = OpenStruct.new(
+  Email::MockUser = OpenStruct.new(
     id:    'ID',
     name:  'NAME',
     email: 'EMAIL',
@@ -62,6 +62,6 @@ RSpec.describe Email do
     subject_line: 'SUBJECT',
     html_content: 'HTML CONTENT',
     text_content: 'TEXT CONTENT',
-    user: MockUser
+    user: Email::MockUser
   )
 end

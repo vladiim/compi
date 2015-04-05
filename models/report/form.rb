@@ -12,7 +12,6 @@ module Report
       @user     = find_or_create_user
       @business = user.add_business(url: site)
       send_thank_you_mail
-      # generate_report
     end
 
     def message
@@ -25,13 +24,12 @@ module Report
       Worker::Mailer::GetReportThanks.perform_async(user.id, business.id)
     end
 
-    def generate_report
-      Worker::Report::Generator.perform_async(user.id, business.id)
-    end
+    # def generate_report
+    #   Worker::Report::Generator.perform_async(user.id, business.id)
+    # end
 
     def find_or_create_user
-      User.find_or_create(email: email)
-          .update(subscription: subscription)
+      UserFactory.new.find_or_create(email: email, subscription: subscription)
     end
   end
 end

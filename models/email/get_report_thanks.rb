@@ -24,9 +24,10 @@ module EmailTemplate
 
     def content
       """
-        Hi and thanks for requesting a compi report.
-        I'm currently building out the first version of the reporting tool.
-        Yours truly
+        Hi and thanks for requesting a compi report for #{ @business.url }.
+        I'm currently building out the first version of the reporting tool. Once it's complete I'll email you the report.
+        In the meantime please feel free to get in touch if you have any questions or specific requests.
+        Cheers,
         Vlad
       """
     end

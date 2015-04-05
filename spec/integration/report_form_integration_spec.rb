@@ -5,15 +5,23 @@ RSpec.describe 'Reports', type: :feature do
   let(:site)  { 'http://www.example.com' }
 
   describe 'fill in get report form' do
-    it 'loads the thank you page' do
-      fill_in_report_form
-      expect(page).to have_content(Copy::Report.thank_you_page(email, site))
+    context 'fields entered' do
+      it 'loads the thank you page' do
+        fill_in_report_form
+        expect(page).to have_content(Copy::Report.thank_you_page(email, site))
+      end
+
+      it 'generates a user, mailer and report' do
+        expect(Report::Form).to receive(:new).with(email, site, 1) { ReportFormStub }
+        expect(ReportFormStub).to receive(:process)
+        fill_in_report_form
+      end
     end
 
-    it 'generates a user, mailer and report' do
-      expect(Report::Form).to receive(:new).with(email, site, 1) { ReportFormStub }
-      expect(ReportFormStub).to receive(:process)
-      fill_in_report_form
+    context 'fields not entered' do
+      it 'loads the errors' do
+        
+      end
     end
   end
 
