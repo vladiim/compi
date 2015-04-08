@@ -4,10 +4,15 @@ Compi::App.controllers :reports do
   end
 
   post :get_report, map: '/reports' do
+    subscribe = params.fetch('subscribe') { '0' }
     form = Report::Form.new(params.fetch('email'),
                             params.fetch('competitor_website'),
-                            params.fetch('subscribe').to_i)
-    form.process
-    render 'reports/thanks', locals: { message: form.message }
+                            subscribe.to_i)
+    if form.valid?
+      form.process
+      render 'reports/thanks', locals: { message: form.message }
+    else
+      render 'reports/index', locals: { flash: { errors: form.errors, type: :error } }
+    end
   end
 end

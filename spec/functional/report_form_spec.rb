@@ -27,6 +27,63 @@ RSpec.describe Report::Form do
     end
   end
 
+  describe '#valid?' do
+    let(:result) { subject.valid? }
+
+    context 'invalid email' do
+      let(:subject) { Report::Form.new('bad email@lol', 'http://notsite.com') }
+
+      it 'is invalid' do
+        expect(result).to be(false)
+      end
+    end
+
+    context 'invalid site' do
+      let(:subject) { Report::Form.new('good.email@lol.com', 'notsite.') }
+
+      it 'is invalid' do
+        expect(result).to be(false)
+      end
+    end
+  end
+
+  describe '#errors', focus: true do
+    let(:result) { subject.errors }
+
+    context 'valid email' do
+      it 'is empty' do
+        expect(result).to eq({})
+      end
+    end
+
+    context 'invalid email' do
+      let(:subject) { Report::Form.new('bad email@lol', 'http://notsite.com') }
+
+      it 'has an invalid email message' do
+        email_message = { email: 'not an email' }
+        expect(result).to eq(email_message)
+      end
+    end
+
+    context 'invalid site' do
+      let(:subject) { Report::Form.new('goodemail@lol.com', 'notsite.com') }
+
+      it 'has an invalid site message' do
+        site_message = { site: 'not a URL' }
+        expect(result).to eq(site_message)
+      end
+    end
+
+    context 'invalid site and email' do
+      let(:subject) { Report::Form.new('bad email@lol', 'notsite.com') }
+
+      it 'has an invalid site email message' do
+        message = { email: 'not an email', site: 'not a URL'}
+        expect(result).to eq(message)
+      end
+    end
+  end
+
   class Report::Form::UserStub
     def add_business(args); end
     def find_or_create(args); self; end

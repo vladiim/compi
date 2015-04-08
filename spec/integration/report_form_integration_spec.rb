@@ -20,25 +20,33 @@ RSpec.describe 'Reports', type: :feature do
 
     context 'fields not entered' do
       it 'loads the errors' do
-        
+        dont_fill_in_report_form
+        within('#form-errors') do
+          expect(page).to have_content('Errors')
+        end
       end
     end
   end
 
   def fill_in_report_form
-    visit '/'
-    within 'nav' do
-      click_link 'Get report'
-    end
+    visit '/reports'
     fill_in 'competitor_website', with: site
     fill_in 'email', with: email
     check 'subscribe'
+    click_button 'Get report'
+  end
+
+  def dont_fill_in_report_form
+    visit '/reports'
     click_button 'Get report'
   end
 end
 
 module ReportFormStub
   def self.process; end
-
   def self.message; end
+  def self.valid?; true; end
+  def self.errors
+    {email: 'not an email'}
+  end
 end

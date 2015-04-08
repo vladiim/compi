@@ -14,11 +14,32 @@ module Report
       send_thank_you_mail
     end
 
+    def valid?
+      email? && site?
+    end
+
+    def errors
+      return {} if valid?
+      email_m = { email: 'not an email' }
+      site_m  = { site: 'not a URL' }
+      return email_m.merge(site_m) unless email? || site?
+      return email_m unless email?
+      site_m unless site?
+    end
+
     def message
       Copy::Report.thank_you_page(email, site)
     end
 
     private
+
+    def email?
+      !VALID_EMAIL_REGEX.match(email).nil?
+    end
+
+    def site?
+      !URI.regexp.match(site).nil?
+    end
 
     def send_thank_you_mail
       Worker::Mailer::GetReportThanks.perform_async(user.id, business.id)
