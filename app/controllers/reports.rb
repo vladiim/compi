@@ -12,7 +12,7 @@ Compi::App.controllers :reports do
       form.process
       render 'reports/thanks', locals: { message: form.message }
     else
-      render 'reports/index', locals: { flash: { errors: form.errors, type: :error } }
+      render 'reports/index', locals: { errors: form.errors }
     end
   end
 end

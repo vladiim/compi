@@ -20,8 +20,8 @@ module Report
 
     def errors
       return {} if valid?
-      email_m = { email: 'not an email' }
-      site_m  = { site: 'not a URL' }
+      email_m = { email: 'not an email, use format "name@email.com"' }
+      site_m  = { site: 'not a URL, use format "http://sitename.com"' }
       return email_m.merge(site_m) unless email? || site?
       return email_m unless email?
       site_m unless site?

@@ -5,7 +5,7 @@
 
   %section
     = form_tag '/reports', method: 'post' do
-      = flash_tag(:notice)
+      = partial '/forms/errors', locals: { errors: errors } if defined?(errors)
       = field_set_tag(class: 'form-inputs') do
         %p
           = label_tag :email, required: true

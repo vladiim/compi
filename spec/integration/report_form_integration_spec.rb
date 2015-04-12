@@ -22,7 +22,7 @@ RSpec.describe 'Reports', type: :feature do
       it 'loads the errors' do
         dont_fill_in_report_form
         within('#form-errors') do
-          expect(page).to have_content('Errors')
+          expect(page).to have_content('There were some errors in submitting your form')
         end
       end
     end

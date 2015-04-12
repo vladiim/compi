@@ -1,0 +1,5 @@
+#form-errors
+  %h4 There were some errors in submitting your form
+  %ul
+    - errors.each do |error|
+      %li= "#{error[0].to_s.capitalize}: #{error[1]}"
