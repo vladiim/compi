@@ -4,5 +4,4 @@ log/*
 dump.rdb
 .development.env
 .test.env
-Gemfile.lock
 .DS_Store
