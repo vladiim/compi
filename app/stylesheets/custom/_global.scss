@@ -1,3 +1,8 @@
 #main {
   margin-top: 70px;
 }
+
+.thank-you-message {
+  @extend .alert;
+  @extend .alert-success;
+}

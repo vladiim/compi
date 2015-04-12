@@ -4297,21 +4297,22 @@ a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #337ab7; }
 
-.alert, #form-errors {
+.alert, .thank-you-message, #form-errors {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; }
-  .alert h4, #form-errors h4 {
+  .alert h4, .thank-you-message h4, #form-errors h4 {
     margin-top: 0;
     color: inherit; }
-  .alert .alert-link, #form-errors .alert-link {
+  .alert .alert-link, .thank-you-message .alert-link, #form-errors .alert-link {
     font-weight: bold; }
-  .alert > p, #form-errors > p,
+  .alert > p, .thank-you-message > p, #form-errors > p,
   .alert > ul,
+  .thank-you-message > ul,
   #form-errors > ul {
     margin-bottom: 0; }
-  .alert > p + p, #form-errors > p + p {
+  .alert > p + p, .thank-you-message > p + p, #form-errors > p + p {
     margin-top: 5px; }
 
 .alert-dismissable,
@@ -4324,13 +4325,13 @@ a.thumbnail.active {
     right: -21px;
     color: inherit; }
 
-.alert-success {
+.alert-success, .thank-you-message {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d; }
-  .alert-success hr {
+  .alert-success hr, .thank-you-message hr {
     border-top-color: #c9e2b3; }
-  .alert-success .alert-link {
+  .alert-success .alert-link, .thank-you-message .alert-link {
     color: #2b542c; }
 
 .alert-info {
