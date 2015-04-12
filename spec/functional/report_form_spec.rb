@@ -49,6 +49,8 @@ RSpec.describe Report::Form do
 
   describe '#errors', focus: true do
     let(:result) { subject.errors }
+    let(:email_error) { { email: 'not an email, use format "name@email.com"' } }
+    let(:site_error) { { site: 'not a URL, use format "http://sitename.com"' } }
 
     context 'valid email' do
       it 'is empty' do
@@ -60,8 +62,7 @@ RSpec.describe Report::Form do
       let(:subject) { Report::Form.new('bad email@lol', 'http://notsite.com') }
 
       it 'has an invalid email message' do
-        email_message = { email: 'not an email' }
-        expect(result).to eq(email_message)
+        expect(result).to eq(email_error)
       end
     end
 
@@ -69,8 +70,7 @@ RSpec.describe Report::Form do
       let(:subject) { Report::Form.new('goodemail@lol.com', 'notsite.com') }
 
       it 'has an invalid site message' do
-        site_message = { site: 'not a URL' }
-        expect(result).to eq(site_message)
+        expect(result).to eq(site_error)
       end
     end
 
@@ -78,7 +78,7 @@ RSpec.describe Report::Form do
       let(:subject) { Report::Form.new('bad email@lol', 'notsite.com') }
 
       it 'has an invalid site email message' do
-        message = { email: 'not an email', site: 'not a URL'}
+        message = email_error.merge(site_error)
         expect(result).to eq(message)
       end
     end
