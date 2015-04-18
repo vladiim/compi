@@ -3,17 +3,17 @@
     %h1 Get report
     %h4 We're still building our reporting tool. Let us know your email and the competitor site you're interested in and we'll send you a report when we've finished building.
 
-  %section
+  %section{ 'data-module' => 'report-form' }
     = form_tag '/reports', method: 'post' do
       = partial '/forms/errors', locals: { errors: errors } if defined?(errors)
       = field_set_tag(class: 'form-inputs') do
         %p
           = label_tag :email, required: true
-          = email_field_tag :email, value: params[:email], placeholder: 'your@email.com'
+          = email_field_tag :email, value: params[:email], placeholder: 'your@email.com', 'data-validate' => 'email'
 
         %p
           = label_tag :competitor_website, required: true
-          = url_field_tag :competitor_website, value: params[:website], placeholder: 'http://www.competitor-site.com'
+          = url_field_tag :competitor_website, value: params[:website], placeholder: 'http://www.competitor-site.com', 'data-validate' => 'url'
 
         .checkbox
           %label
